@@ -1,0 +1,13 @@
+{
+  "name": "safeher-backend",
+  "version": "1.0.0",
+  "description": "SafeHer Backend API Server with SQLite",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": ["safety", "emergency", "backend", "sqlite", "nodejs"],
+  "author": "SafeHer Team",
+  "license": "MIT"
+}

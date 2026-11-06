@@ -232,7 +232,7 @@ server.listen(PORT, () => {
 🛡️  SafeHer - Women Safety & Emergency Support System
 =====================================================
 📡 Backend Server running on: http://localhost:${PORT}
-💾 SQLite Database: Persistent at ./data/safeher.sqlite
+💾 SQLite Database: Persistent at ./database/safeher.sqlite
 🚀 Frontend Web Application: http://localhost:${PORT}
 =====================================================
   `);
