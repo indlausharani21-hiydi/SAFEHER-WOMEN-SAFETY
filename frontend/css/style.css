@@ -1,0 +1,106 @@
+/* SafeHer Custom Styles & Keyframe Animations */
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 25px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes siren-strobe {
+  0%, 100% {
+    background-color: rgba(239, 68, 68, 0.2);
+    box-shadow: inset 0 0 40px rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.2);
+    box-shadow: inset 0 0 40px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes phone-shake {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(-8deg); }
+  20%, 40%, 60%, 80% { transform: rotate(8deg); }
+}
+
+.sos-button-glow {
+  animation: pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.siren-active-overlay {
+  animation: siren-strobe 0.8s infinite alternate;
+}
+
+.phone-ringing-animation {
+  animation: phone-shake 1.2s infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Leaflet Map Custom Marker Styles */
+.custom-user-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-dot {
+  width: 18px;
+  height: 18px;
+  background-color: #3b82f6;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+  position: relative;
+}
+
+.radar-dot::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  border: 2px solid rgba(59, 130, 246, 0.6);
+  animation: pulse-ring 1.8s infinite;
+}
+
+/* Tab Active Highlights */
+.tab-active {
+  color: #4f46e5;
+  border-bottom: 2px solid #4f46e5;
+  font-weight: 600;
+}
