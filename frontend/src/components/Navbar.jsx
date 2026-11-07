@@ -29,15 +29,18 @@ export default function Navbar({ onOpenSOS }) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
             <a href="#features" className="text-sm font-semibold text-slate-600 hover:text-purple-600 transition-colors">
               Safety Features
+            </a>
+            <a href="#sensors" className="text-sm font-semibold text-purple-600 hover:text-pink-600 transition-colors flex items-center gap-1">
+              <span>⚡</span> Auto Sensors
             </a>
             <a href="#about" className="text-sm font-semibold text-slate-600 hover:text-purple-600 transition-colors">
               About Us
             </a>
             <a href="#helpline" className="text-sm font-semibold text-slate-600 hover:text-purple-600 transition-colors">
-              Emergency Directory
+              Directory
             </a>
             <a href="#contact" className="text-sm font-semibold text-slate-600 hover:text-purple-600 transition-colors">
               Contact
@@ -102,6 +105,13 @@ export default function Navbar({ onOpenSOS }) {
               className="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-pink-50 hover:text-pink-600"
             >
               Safety Features
+            </a>
+            <a 
+              href="#sensors" 
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-2 rounded-lg text-sm font-semibold text-purple-700 hover:bg-purple-50"
+            >
+              ⚡ Automatic Sensors
             </a>
             <a 
               href="#about" 

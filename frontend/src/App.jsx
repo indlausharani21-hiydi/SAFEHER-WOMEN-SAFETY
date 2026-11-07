@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import AutoSensors from './components/AutoSensors';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ export default function App() {
       <main className="flex-grow">
         <Hero onOpenSOS={() => setIsEmergencyOpen(true)} />
         <Features onOpenSOS={() => setIsEmergencyOpen(true)} />
+        <AutoSensors onTriggerSOS={() => setIsEmergencyOpen(true)} />
         <AboutUs />
         <Contact />
       </main>
