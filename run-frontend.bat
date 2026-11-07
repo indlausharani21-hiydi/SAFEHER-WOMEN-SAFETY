@@ -2,13 +2,9 @@
 title SafeHer - Frontend React Dev Server
 cd /d "%~dp0frontend"
 echo ====================================================
-echo Starting SafeHer Frontend (React + Vite)...
+echo Starting SafeHer React Dev Server at http://localhost:5173
 echo ====================================================
 echo.
+start "" "http://localhost:5173"
 call npm.cmd run dev
-if %errorlevel% neq 0 (
-    echo Installing dependencies first...
-    call npm.cmd install
-    call npm.cmd run dev
-)
 pause

@@ -17,7 +17,8 @@ const placesController = require('./routes/places');
 const reportsController = require('./routes/reports');
 
 const PORT = process.env.PORT || 5000;
-const FRONTEND_DIR = path.resolve(__dirname, '../../frontend');
+const DIST_DIR = path.resolve(__dirname, '../../frontend/dist');
+const FRONTEND_DIR = fs.existsSync(DIST_DIR) ? DIST_DIR : path.resolve(__dirname, '../../frontend');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
